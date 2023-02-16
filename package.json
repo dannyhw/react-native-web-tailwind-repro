@@ -34,7 +34,6 @@
   },
   "dependencies": {
     "@babel/plugin-proposal-export-namespace-from": "^7.18.9",
-    "@expo/vector-icons": "^13.0.0",
     "nativewind": "^2.0.11",
     "react": "18.2.0",
     "react-native": "0.70.5"
