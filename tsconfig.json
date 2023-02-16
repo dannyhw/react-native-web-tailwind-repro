@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
+    "baseUrl": ".",
+    "emitDecoratorMetadata": true,
+    "esModuleInterop": true,
+    "experimentalDecorators": true,
+    "incremental": false,
+    "isolatedModules": true,
+    "jsx": "react",
+    "lib": ["es2017", "dom"],
+    "module": "commonjs",
+    "noImplicitAny": true,
+    "rootDir": "./",
+    "skipLibCheck": true,
+    "target": "es5",
+    "strict": true,
+    "outDir": "dist"
+  },
+  "include": [".", "./.storybook/"],
+  "exclude": ["dist", "build", "node_modules"]
+}
