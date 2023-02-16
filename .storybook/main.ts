@@ -11,32 +11,38 @@ const mainConfig: StorybookConfig = {
         babelPlugins: ["nativewind/babel"],
       },
     },
+    {
+      name: "@storybook/addon-styling",
+      options: {
+        postCss: true,
+      },
+    },
   ],
   staticDirs: ["../static"],
   core: {
     builder: "webpack5",
   },
   framework: "@storybook/react",
-  webpackFinal: async (config) => {
-    config.module?.rules?.push({
-      test: /\.css$/,
-      use: [
-        {
-          loader: "postcss-loader",
-          options: {
-            postcssOptions: {
-              plugins: [require("tailwindcss"), require("autoprefixer")],
-            },
-          },
-        },
-      ],
-      include: path.resolve(__dirname, "../"),
-    });
+  // webpackFinal: async (config) => {
+  //   config.module?.rules?.push({
+  //     test: /\.css$/,
+  //     use: [
+  //       {
+  //         loader: "postcss-loader",
+  //         options: {
+  //           postcssOptions: {
+  //             plugins: [require("tailwindcss"), require("autoprefixer")],
+  //           },
+  //         },
+  //       },
+  //     ],
+  //     include: path.resolve(__dirname, "../"),
+  //   });
 
-    return {
-      ...config,
-    };
-  },
+  //   return {
+  //     ...config,
+  //   };
+  // },
 };
 
 module.exports = mainConfig;
